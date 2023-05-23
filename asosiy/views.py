@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from rest_framework import filters
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -55,6 +56,8 @@ class VideoViewSet(ModelViewSet):
     queryset = Video.objects.all().order_by('-sana')
     serializer_class = VideoSerializer
     http_method_names = ['get']
+
+    filter_backends =[filters.SearchFilter, filters.OrderingFilter]
     order_fields = ['sana', 'sarlavha', 'sarlavhaeng', 'sarlavharu']
     search_fields = ['sana', 'sarlavha', 'sarlavhaeng', 'sarlavharu', 'matn', 'matneng', 'matnru']
 
