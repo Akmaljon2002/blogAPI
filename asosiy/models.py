@@ -16,9 +16,9 @@ class Home_page(models.Model):
     ism = models.CharField(max_length=50, null=True, blank=True)
     ismru = models.CharField(max_length=50, null=True, blank=True)
 
-    matn = models.CharField(max_length=60, null=True, blank=True)
-    matneng = models.CharField(max_length=60, null=True, blank=True)
-    matnru = models.CharField(max_length=60, null=True, blank=True)
+    matn = models.CharField(max_length=100, null=True, blank=True)
+    matneng = models.CharField(max_length=100, null=True, blank=True)
+    matnru = models.CharField(max_length=100, null=True, blank=True)
 
     haqida = models.CharField(max_length=20, null=True, blank=True)
     haqidaeng = models.CharField(max_length=20, null=True, blank=True)
