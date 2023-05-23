@@ -3,7 +3,6 @@ from .models import *
 
 class MaqolaAdmin(admin.ModelAdmin):
     readonly_fields = ('korilganlik',)
-
     def get_readonly_fields(self, request, obj=None):
         if obj:  # Eski obyekt tahrirlanayotganida
             return self.readonly_fields
@@ -13,7 +12,6 @@ class MaqolaAdmin(admin.ModelAdmin):
     list_editable = ("bosh_sahifa_uchun", )
     list_display_links = ("sarlavha", )
     list_filter = ("sarlavha", "id", "bosh_sahifa_uchun")
-
 admin.site.register(Maqola, MaqolaAdmin)
 
 
@@ -23,8 +21,8 @@ admin.site.register(Menu)
 
 class Home_pageAdmin(admin.ModelAdmin):
     search_fields = ("ism", "ismru")
-
 admin.site.register(Home_page, Home_pageAdmin)
+
 
 class VideoAdmin(admin.ModelAdmin):
     list_display = ("sarlavha", "url")
