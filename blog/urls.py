@@ -15,8 +15,7 @@ schema_view = get_schema_view(
    openapi.Info(
       title="Blog API",
       default_version='v1',
-      description="Shaxsiz blog uchun API",
-      contact=openapi.Contact(email="akmaljonfayzullayev07@gmail.com"),
+      description="Shaxsiy blog uchun API",
       license=openapi.License(name="Akmaljon"),
    ),
    public=True,
