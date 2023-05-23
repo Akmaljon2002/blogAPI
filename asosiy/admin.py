@@ -8,12 +8,29 @@ class MaqolaAdmin(admin.ModelAdmin):
         if obj:  # Eski obyekt tahrirlanayotganida
             return self.readonly_fields
         return self.readonly_fields
+    list_display = ("id", "sarlavha", "sana", "bosh_sahifa_uchun", "korilganlik")
+    search_fields = ("sarlavha", "sarlavhaeng", "sarlavharu")
+    list_editable = ("bosh_sahifa_uchun", )
+    list_display_links = ("sarlavha", )
+    list_filter = ("sarlavha", "id", "bosh_sahifa_uchun")
 
 admin.site.register(Maqola, MaqolaAdmin)
+
+
+
 admin.site.register(Murojaat)
 admin.site.register(Menu)
-admin.site.register(Home_page)
-admin.site.register(Video)
+
+class Home_pageAdmin(admin.ModelAdmin):
+    search_fields = ("ism", "ismru")
+
+admin.site.register(Home_page, Home_pageAdmin)
+
+class VideoAdmin(admin.ModelAdmin):
+    list_display = ("sarlavha", "url")
+    list_filter = ("sarlavha", )
+
+admin.site.register(Video, VideoAdmin)
 admin.site.register(Ijtimoiy_tarmoq_url)
 admin.site.register(Haqida_toliq)
 admin.site.register(Faoliyat_joy)
