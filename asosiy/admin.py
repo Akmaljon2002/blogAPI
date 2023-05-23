@@ -11,3 +11,10 @@ class MaqolaAdmin(admin.ModelAdmin):
 
 admin.site.register(Maqola, MaqolaAdmin)
 admin.site.register(Murojaat)
+admin.site.register(Menu)
+admin.site.register(Home_page)
+admin.site.register(Video)
+admin.site.register(Ijtimoiy_tarmoq_url)
+admin.site.register(Haqida_toliq)
+admin.site.register(Faoliyat_joy)
+admin.site.register(Hamkor)
