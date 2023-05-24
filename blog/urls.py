@@ -15,7 +15,8 @@ schema_view = get_schema_view(
    openapi.Info(
       title="Blog API",
       default_version='v1',
-      description="Shaxsiy blog uchun API",
+      description="Shaxsiy blog uchun API. \nVideo bo'limida 'search' va 'ordering' ni ishlatish uchun urls: "
+                  "'video/?search=soz', 'video/?ordering=ustun'",
       license=openapi.License(name="Akmaljon"),
    ),
    public=True,
