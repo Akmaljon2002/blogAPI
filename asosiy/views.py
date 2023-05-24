@@ -55,8 +55,8 @@ class VideoViewSet(ModelViewSet):
     queryset = Video.objects.all().order_by('-sana')
     serializer_class = VideoSerializer
     http_method_names = ['get']
-    order_fields = ['sana', 'sarlavha', 'sarlavhaeng', 'sarlavharu']
-    search_fields = ['sana', 'sarlavha', 'sarlavhaeng', 'sarlavharu', 'matn', 'matneng', 'matnru']
+    order_fields = ['sana',]
+    search_fields = ['sana',]
 
 class Ijtimoiy_tarmoqViewSet(ModelViewSet):
     queryset = Ijtimoiy_tarmoq_url.objects.all()

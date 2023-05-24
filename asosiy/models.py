@@ -59,20 +59,20 @@ class Maqola(models.Model):
 
 
 class Video(models.Model):
-    sarlavha = models.CharField(max_length=100, null=True, blank=True)
-    sarlavhaeng = models.CharField(max_length=100, null=True, blank=True)
-    sarlavharu = models.CharField(max_length=100, null=True, blank=True)
-
-    matn = models.TextField(null=True, blank=True)
-    matneng = models.TextField(null=True, blank=True)
-    matnru = models.TextField(null=True, blank=True)
+    # sarlavha = models.CharField(max_length=100, null=True, blank=True)
+    # sarlavhaeng = models.CharField(max_length=100, null=True, blank=True)
+    # sarlavharu = models.CharField(max_length=100, null=True, blank=True)
+    #
+    # matn = models.TextField(null=True, blank=True)
+    # matneng = models.TextField(null=True, blank=True)
+    # matnru = models.TextField(null=True, blank=True)
 
     sana = models.DateField(auto_now_add=True)
     url = models.CharField(max_length=200, null=True, blank=True)
     rasm = models.FileField(null=True, blank=True)
 
     def __str__(self):
-        return self.sarlavha
+        return self.url
 
 
 class Ijtimoiy_tarmoq_url(models.Model):

@@ -25,8 +25,8 @@ admin.site.register(Home_page, Home_pageAdmin)
 
 
 class VideoAdmin(admin.ModelAdmin):
-    list_display = ("sarlavha", "url")
-    list_filter = ("sarlavha", )
+    list_display = ("url",)
+
 
 admin.site.register(Video, VideoAdmin)
 admin.site.register(Ijtimoiy_tarmoq_url)
