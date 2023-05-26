@@ -25,7 +25,7 @@ class Home_page(models.Model):
     haqidaru = models.CharField(max_length=20, null=True, blank=True)
 
 
-    rasm = models.FileField(blank=True, null=True)
+    rasm = models.ImageField(blank=True, null=True)
 
 
     def __str__(self):
@@ -44,16 +44,16 @@ class Maqola(models.Model):
     bosh_sahifa_uchun = models.BooleanField(default=False)
     korilganlik = models.PositiveIntegerField(default=0)
 
-    rasm1 = models.FileField(null=True, blank=True)
-    rasm2 = models.FileField(null=True, blank=True)
-    rasm3 = models.FileField(null=True, blank=True)
-    rasm4 = models.FileField(null=True, blank=True)
-    rasm5 = models.FileField(null=True, blank=True)
-    rasm6 = models.FileField(null=True, blank=True)
-    rasm7 = models.FileField(null=True, blank=True)
-    rasm8 = models.FileField(null=True, blank=True)
-    rasm9 = models.FileField(null=True, blank=True)
-    rasm10 = models.FileField(null=True, blank=True)
+    rasm1 = models.ImageField(null=True, blank=True)
+    rasm2 = models.ImageField(null=True, blank=True)
+    rasm3 = models.ImageField(null=True, blank=True)
+    rasm4 = models.ImageField(null=True, blank=True)
+    rasm5 = models.ImageField(null=True, blank=True)
+    rasm6 = models.ImageField(null=True, blank=True)
+    rasm7 = models.ImageField(null=True, blank=True)
+    rasm8 = models.ImageField(null=True, blank=True)
+    rasm9 = models.ImageField(null=True, blank=True)
+    rasm10 = models.ImageField(null=True, blank=True)
     def __str__(self):
         return  self.sarlavha
 
@@ -68,8 +68,8 @@ class Video(models.Model):
     # matnru = models.TextField(null=True, blank=True)
 
     sana = models.DateField(auto_now_add=True)
-    url = models.CharField(max_length=200, null=True, blank=True)
-    rasm = models.FileField(null=True, blank=True)
+    url = models.URLField(max_length=200, null=True, blank=True)
+    rasm = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.url
@@ -77,7 +77,7 @@ class Video(models.Model):
 
 class Ijtimoiy_tarmoq_url(models.Model):
     nom = models.CharField(max_length=30)
-    url = models.CharField(max_length=200)
+    url = models.URLField(max_length=200)
 
     def __str__(self):
         return self.nom
@@ -92,7 +92,7 @@ class Haqida_toliq(models.Model):
     matneng = models.TextField(null=True, blank=True)
     matnru = models.TextField(null=True, blank=True)
 
-    rasm = models.FileField(null=True, blank=True)
+    rasm = models.ImageField(null=True, blank=True)
 
     hozirgi_orni = models.CharField(max_length=200, null=True, blank=True)
     hozirgi_ornieng = models.CharField(max_length=200, null=True, blank=True)
@@ -104,14 +104,14 @@ class Haqida_toliq(models.Model):
 
 class Faoliyat_joy(models.Model):
     nom = models.CharField(max_length=30)
-    rasm = models.FileField()
+    rasm = models.ImageField()
 
     def __str__(self):
         return self.nom
 
 class Hamkor(models.Model):
     nom = models.CharField(max_length=50, null=True, blank=True)
-    rasm = models.FileField()
+    rasm = models.ImageField()
 
     def __str__(self):
         return self.nom
